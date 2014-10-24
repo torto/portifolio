@@ -83,6 +83,7 @@ var controlesJogo = {
         Mousetrap.bind('right', function() {
             app.elSurfista.position.x += 5;
         });
+       
         Mousetrap.bind('left', function() {
             app.elSurfista.position.x -= 5;
         });
