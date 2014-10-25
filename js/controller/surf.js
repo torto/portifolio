@@ -1,107 +1,77 @@
-var app = {
-    inicializar: function() {
-        // cria a instancia pixi stage
-        this.stage = new PIXI.Stage(0xC6C6C6, true);
+var game = new Phaser.Game(900, 500, Phaser.CANVAS, "center", {
+    preload: construtor,
+    create: construiu,
+    update: animacao
+});
 
-        //injetar todas as imagens para inserir uma unica vez
-        this.gameInjecao = new PIXI.DisplayObjectContainer();
-        this.gameInjecaoMar = new PIXI.DisplayObjectContainer();
+var app = {};
 
-        this.renderer = PIXI.autoDetectRenderer(900, 500);
-        document.getElementById('center').appendChild(this.renderer.view);
-
-        this.carregarOndas();
-        this.carregarSurfista();
-
-    },
-    carregarOndas: function() {
-        // MAR CONFIGURAÇAO
-        var ttMar = PIXI.Texture.fromImage("img/mar/1-test.png");
-        this.elMar = new PIXI.TilingSprite(ttMar, 1000, 71);
-
-        this.elMar.position.y = 429;
-
-        var ttMar1 = PIXI.Texture.fromImage("img/mar/2.png");
-        this.elMar1 = new PIXI.TilingSprite(ttMar1, 1000, 124);
-
-        this.elMar1.position.y = 376;
-
-        var ttMar2 = PIXI.Texture.fromImage("img/mar/3.png");
-        this.elMar2 = new PIXI.TilingSprite(ttMar2, 1000, 146);
-
-        this.elMar2.position.y = 354;
-
-        var ttMar3 = PIXI.Texture.fromImage("img/mar/4.png");
-        this.elMar3 = new PIXI.TilingSprite(ttMar3, 1000, 170);
-
-        this.elMar3.position.y = 330;
-
-        this.gameInjecaoMar.addChild(this.elMar3);
-        this.gameInjecaoMar.addChild(this.elMar2);
-        this.gameInjecaoMar.addChild(this.elMar1);
-        this.gameInjecaoMar.addChild(this.elMar);
-
-    },
-    carregarSurfista: function() {
-        //SURFISTA CONFIGURACAO
-
-        var ttSurfista = PIXI.Texture.fromImage("img/surfista.png");
-        this.elSurfista = new PIXI.Sprite(ttSurfista);
-
-        this.elSurfista.position.x = 30;
-        this.elSurfista.position.y = 260;
-
-        this.gameInjecao.addChild(this.elSurfista);
-    },
-    inserirStage: function() {
-        //inserir imagens e elementos no stage
-        this.stage.addChild(this.gameInjecaoMar);
-        this.stage.addChild(this.gameInjecao);
-    },
-    iniciarAnimacao: function() {
-        //INICIAR ANIMACAO JOGO
-        requestAnimFrame(this.animate);
-    },
-    animate: function() {
-        //MAR ANIMACAO CONSTANTE
-        app.elMar.tilePosition.x += 1.5;
-        app.elMar1.tilePosition.x += 1;
-        app.elMar2.tilePosition.x += 1;
-        app.elMar3.tilePosition.x += 0.5;
-        //------------------------
-        app.renderer.render(app.stage);
-        requestAnimFrame(app.animate);
-    },
-    carregarInicioJogo: function() {
-        this.play = true;
-        controlesJogo.controleSurfista();
-    }
+function construtor() {
+    game.load.image('surfista', 'img/surfista.png');
+    game.load.image('mar4', 'img/mar/4.png');
+    game.load.image('mar3', 'img/mar/3.png');
+    game.load.image('mar2', 'img/mar/2.png');
+    game.load.image('mar1', 'img/mar/1-test.png');
 }
 
-var controlesJogo = {
-    controleSurfista: function() {
-        Mousetrap.bind('right', function() {
-            app.elSurfista.position.x += 5;
-        });
-       
-        Mousetrap.bind('left', function() {
-            app.elSurfista.position.x -= 5;
-        });
-       
-        Mousetrap.bind('up', function() {
-            for (var i = 0; i <= 10; i++) {
-                   app.elSurfista.position.y -= 5;
-            };
-        });
-        Mousetrap.bind('down', function() {
-            for (var i = 0; i <= 10; i++) {
-                   app.elSurfista.position.y += 5;
-            };
-        });
-    }
+function construiu() {
+    //adicionando os mares
+    app.mar4 = game.add.tileSprite(0, 331, 1000, 170, 'mar4');
+    app.mar3 = game.add.tileSprite(0, 355, 1000, 146, 'mar3');
+    app.mar2 = game.add.tileSprite(0, 377, 1000, 124, 'mar2');
+    app.mar1 = game.add.tileSprite(0, 430, 1000, 71, 'mar1');
+
+    //adicionando o surfista
+    app.surfista = game.add.tileSprite(30, 380, 250, 187, 'surfista');
+
+    //surfista fisica adicionada
+    game.physics.startSystem(Phaser.Physics.P2JS);
+    game.physics.p2.enable(app.surfista);
+    app.surfista.body.allowRotation = false;
+    app.surfista.body.inertia = 0;
+
+    app.cursor = game.input.keyboard.createCursorKeys();
+
 }
 
-app.inicializar();
-app.inserirStage();
-app.iniciarAnimacao();
-app.carregarInicioJogo();
+function animacao() {
+    app.mar1.tilePosition.x += 1.5;
+    app.mar2.tilePosition.x += 1;
+    app.mar3.tilePosition.x += 1;
+    app.mar4.tilePosition.x += 0.5;
+
+    if (app.cursor.left.isDown) {
+        app.surfista.body.moveLeft(300);
+    }
+
+    if (app.cursor.right.isDown) {
+        app.surfista.body.moveRight(300);
+    }
+
+    if (app.cursor.up.isDown) {
+        //app.up - verifica se chegou ao topo
+        //do pulo, torna true quando solta o dedo
+        if (app.surfista.body.y > 250 && app.up) {
+            app.surfista.body.moveUp(500);
+        } else {
+            app.up = false;
+            if (app.surfista.body.y < 380) {
+                app.surfista.body.moveDown(600);
+            } else {
+                app.surfista.body.y = 380;//seta lugar inicio
+            }
+        }
+
+    }
+    if (app.cursor.up.isUp) {
+        app.up = true;
+        if (app.surfista.body.y < 380) {
+            app.surfista.body.moveDown(600);
+        } else {
+            app.surfista.body.y = 380; //seta lugar inicio
+        }
+    }
+
+    app.surfista.body.angularVelocity = 0
+    app.surfista.body.setZeroForce();
+}
