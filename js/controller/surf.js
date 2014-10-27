@@ -22,7 +22,7 @@ function construiu() {
     alert('Ajustando ainda uma colisão mais refinada');
     alert('Tubarão 2000');
 
-    game.world.setBounds(-200, 0, 1700, 500);// seta tamanho da colisão da tela
+    game.world.setBounds(-200, 0, 1700, 500); // seta tamanho da colisão da tela
 
     //adiciona as imagens na ela
     adicionandoImagens();
@@ -85,9 +85,11 @@ function animacao() {
 }
 
 function adicionandoImagens() {
-    //adicionando os mares - Parte 1
-    app.fundo = game.add.image(0,0, 'fundo');
 
+    //adicionando fundo
+    app.fundo = game.add.image(0, 0, 'fundo');
+
+    //adicionando os mares - Parte 1
     app.mar4 = game.add.tileSprite(0, 331, 1000, 170, 'mar4');
     app.mar3 = game.add.tileSprite(0, 355, 1000, 146, 'mar3');
     app.mar2 = game.add.tileSprite(0, 377, 1000, 124, 'mar2');
@@ -114,36 +116,29 @@ function setarValoresTubaroes(valor) {
     valor.body.setZeroVelocity();
     valor.body.y = 450;
     valor.y = 450;
-    // valor.body.collideWorldBounds = false;
 }
 
 function execTubarao() {
-    if (app.tubarao.body) {
         app.tubarao.body.setZeroVelocity();
         app.tubarao.body.y = 450;
         app.tubarao.y = 450;
         if (app.tubarao.exec) {
             app.tubarao.body.moveLeft(200);
         }
-    }
 
-    if (app.tubarao1.body) {
         app.tubarao1.body.setZeroVelocity();
         app.tubarao1.body.y = 450;
         app.tubarao1.y = 450;
         if (app.tubarao1.exec) {
             app.tubarao1.body.moveLeft(200);
         }
-    }
 
-    if (app.tubarao2.body) {
         app.tubarao2.body.setZeroVelocity();
         app.tubarao2.body.y = 450;
         app.tubarao2.y = 450;
         if (app.tubarao2.exec) {
             app.tubarao2.body.moveLeft(200);
         }
-    }
 
     if (parseInt(app.tubarao.x, 10) <= -105) {
         app.tubarao.exec = false;
@@ -179,7 +174,7 @@ function execControles() {
 
     if (app.cursor.up.isDown) {
         //app.up - verifica se chegou ao topo
-        //do pulo, torna true quando solta o dedo
+        //do pulo, app.up volta para true quando solta o dedo
         if (app.surfista.body.y > 200 && app.up) {
             app.surfista.body.moveUp(600);
         } else {
@@ -203,11 +198,14 @@ function execControles() {
 }
 
 function execSurfista() {
-    if(parseInt(app.surfista.body.x, 10) < 59){
+
+    //verifica se surfista esta saindo da tela
+    //e torna a posição fixa
+    if (parseInt(app.surfista.body.x, 10) < 59) {
         app.surfista.body.x = 59;
     }
 
-    if(parseInt(app.surfista.x,10) > 825){
+    if (parseInt(app.surfista.x, 10) > 825) {
         app.surfista.body.x = 825;
     }
 }
