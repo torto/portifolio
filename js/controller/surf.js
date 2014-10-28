@@ -18,10 +18,6 @@ function construtor() {
 
 function construiu() {
 
-    alert('Bem Vindo a versão beta beta da beta da beta');
-    alert('Ajustando ainda uma colisão mais refinada');
-    alert('Tubarão 2000');
-
     game.world.setBounds(-200, 0, 1700, 500); // seta tamanho da colisão da tela
 
     //adiciona as imagens na ela
