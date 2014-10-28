@@ -51,34 +51,34 @@ function construiu() {
     app.dog.body.fixedRotation = true;
 
     //setando valores staticos do homem
-    zerarHomem();// volta todos os valores para os iniciais
+    zerarHomem(); // volta todos os valores para os iniciais
 
-    app.homem.body.createBodyCallback(app.dog, colidirDog, this);//evento de toque do homem ao cachorro
-    game.physics.p2.setImpactEvents(true);//habilita o callback para eventos de colião
+    app.homem.body.createBodyCallback(app.dog, colidirDog, this); //evento de toque do homem ao cachorro
+    game.physics.p2.setImpactEvents(true); //habilita o callback para eventos de colião
 
-    app.cursor = game.input.keyboard.createCursorKeys();// pega as keys digitadas
+    app.cursor = game.input.keyboard.createCursorKeys(); // pega as keys digitadas
 
-    app.um = game.input.keyboard.addKey(Phaser.Keyboard.ONE);// adiciona o envento para botao 1
+    app.um = game.input.keyboard.addKey(Phaser.Keyboard.ONE); // adiciona o envento para botao 1
     app.um.onDown.add(callUm, this);
 
-    app.dois = game.input.keyboard.addKey(Phaser.Keyboard.TWO);// adiciona o envento para botao 2
+    app.dois = game.input.keyboard.addKey(Phaser.Keyboard.TWO); // adiciona o envento para botao 2
     app.dois.onDown.add(callDois, this);
 
-    app.go = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);// adiciona o envento para botao espaço
+    app.go = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR); // adiciona o envento para botao espaço
     app.go.onDown.add(execHomem, this);
 
     app.exec = true; // evita que de para dar duplo espaço no executar
 
     //adiciona texto legenda
-    app.texto = game.add.text(30, 10, 'Alterar Força: 1/2 - Alterar Angulo: Up/Down', {
+    app.texto = game.add.text(30, 10, 'Alterar Força: 1/2 - Alterar Angulo: Up/Down - Lançar o Rafa - Espaço - Direcionar camera - left/right', {
         font: "12px sans-serif",
         fill: "#ffffff",
         align: "center"
     });
-    inserirTextoForca();//insere texto de forca e angulo
+    inserirTextoForca(); //insere texto de forca e angulo
     inserirTextoAngulo();
 
-    
+
 }
 
 function animacao() {
@@ -131,9 +131,9 @@ function execControles() {
     }
 
     if (app.cursor.left.isDown) {
-        game.camera.x -= 4;
+        game.camera.x -= 20;
     } else if (app.cursor.right.isDown) {
-        game.camera.x += 4;
+        game.camera.x += 20;
     }
 
 }
@@ -174,6 +174,7 @@ function execHomem() {
 
 function colidirDog() {
     alert('Encontrou!');
+    app.dog.body.x = gerarValoresRandomicos(150, 1990);
     zerarHomem();
 }
 

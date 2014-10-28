@@ -7,13 +7,13 @@ var game = new Phaser.Game(900, 500, Phaser.CANVAS, 'center', {
 var app = {};
 
 function construtor() {
-    game.load.image('fundo', 'img/fundo.jpg');
-    game.load.image('surfista', 'img/surfista.png');
-    game.load.image('mar4', 'img/mar/4.png');
-    game.load.image('mar3', 'img/mar/3.png');
-    game.load.image('mar2', 'img/mar/2.png');
-    game.load.image('mar1', 'img/mar/1-test.png');
-    game.load.image('tubarao', 'img/tubarao1.png');
+    game.load.image('fundo', 'img/surf/fundo.jpg');
+    game.load.image('surfista', 'img/surf/surfista.png');
+    game.load.image('mar4', 'img/surf/mar/4.png');
+    game.load.image('mar3', 'img/surf/mar/3.png');
+    game.load.image('mar2', 'img/surf/mar/2.png');
+    game.load.image('mar1', 'img/surf/mar/1-test.png');
+    game.load.image('tubarao', 'img/surf/tubarao1.png');
 }
 
 function construiu() {
