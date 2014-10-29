@@ -1,37 +1,983 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/surf.css">
-	</head>
-	<body>
-		<div id="center">
-			<table border="1">
-				<caption>Jogos Portifolio Taller</caption>
-				<thead>
-					<tr>
-						<th>Jogo</th>
-						<th>Personagem</th>
-						<th>Link</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Tubarão 2000</td>
-						<td>Aldo</td>
-						<td><a href="surf.html">Click Aqui</a></td>
-					</tr>
-					<tr>
-						<td>Encontro o Drush</td>
-						<td>Rafa e Drush</td>
-						<td><a href="dog.html">Click Aqui</a></td>
-					</tr>
-				</tbody>
-			</table>
+<html style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Potifólio Tortoterativo</title>
+
+<meta name="description" content="TODO">
+<meta name="author" content="TODO">
+
+<style>
+.componentContainer {
+    position: absolute;
+    line-height: normal;
+    /*-webkit-transform-origin: 135% 135%;
+    -moz-transform-origin: 135% 135%;
+    transform-origin: 135% 135%;*/
+}
+
+.transformContainer {
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<link rel="stylesheet" href="Deck%20Title_arquivos/default-reset.css">
+<link href="Deck%20Title_arquivos/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="Deck%20Title_arquivos/default.css" id="theme">
+<link href="Deck%20Title_arquivos/web-fonts.css" rel="stylesheet" type="text/css">
+<link href="Deck%20Title_arquivos/backgroundClasses.css" rel="stylesheet" type="text/css">
+<link href="Deck%20Title_arquivos/surfaceClasses.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" href="http://strut.io/editor/preview_export/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="http://strut.io/editor/preview_export/apple-touch-icon.png" type="image/png">
+
+<style>
+.reveal.themedArea {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<script src="Deck%20Title_arquivos/analytics.js" async=""></script><script type="text/javascript" src="Deck%20Title_arquivos/dataset-shim.js"></script>
+<script type="text/javascript" src="Deck%20Title_arquivos/impress.js"></script>
+
+<script src="Deck%20Title_arquivos/onready.js"></script>
+<script src="Deck%20Title_arquivos/loadPresentation.js"></script>
+<script>
+ready(function() {
+    if (document.getElementById('launched-placeholder'))
+        loadPresentation();
+
+    if (!window.presStarted) {
+        startPres(document, window);
+        impress().init();   
+    }
+
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = 
+            "<p>Tap on the left or right to navigate</p>";
+    }
+});
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42322531-1', 'strut.io');
+    ga('send', 'pageview');
+    </script>
+</head>
+<body style="height: 100%; overflow: hidden;" class="impress-supported impress-enabled">
+<style type="text/css">
+
+</style>
+<style>
+
+</style>
+<style>
+
+
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+</style>
+<!-- This is a work around / hack to get the user's browser to download the fonts 
+ if they decide to save the presentation. -->
+<div style="visibility: hidden; width: 0px; height: 0px">
+<img src="Deck%20Title_arquivos/Lato-Bold.woff">
+<img src="Deck%20Title_arquivos/HammersmithOne.woff">
+<img src="Deck%20Title_arquivos/Droid-Sans-Mono.woff">
+<img src="Deck%20Title_arquivos/Gorditas-Regular.woff">
+<img src="Deck%20Title_arquivos/FredokaOne-Regular.woff">
+<img src="Deck%20Title_arquivos/Ubuntu.woff">
+<img src="Deck%20Title_arquivos/Ubuntu-Bold.woff">
+<img src="Deck%20Title_arquivos/PressStart2P-Regular.woff">
+<img src="Deck%20Title_arquivos/Lato-BoldItalic.woff">
+<img src="Deck%20Title_arquivos/AbrilFatface-Regular.woff">
+<img src="Deck%20Title_arquivos/Lato-Regular.woff">
+</div>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="bg  strut-surface">
+<div class="bg innerBg strut-slide-22">
+<div style="position: absolute; transform-origin: left top 0px; transition: all 0ms ease-in-out 0ms; transform-style: preserve-3d; top: 50%; left: 50%; transform: perspective(3872.27px) scale(0.258247);" id="impress"><div style="position: absolute; transform-origin: left top 0px; transition: all 0ms ease-in-out 0ms; transform-style: preserve-3d; transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(-86562.1px, -15667.2px, 0px);">
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(2457.6px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-1" class="step future" data-state="strut-slide-0" data-x="2457.6" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-0" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 326px; left: 186px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font color="#920909">Portfólio Tortoterativo<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
 		</div>
-	</body>
-</html>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(6280.53px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-2" class="step future" data-state="strut-slide-1" data-x="6280.533333333334" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-1" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 420px; left: 209px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font color="#920909">Olá pessoal da Taller<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 266px; left: 358px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_arquivos/RH9aXzs.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(10103.5px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-3" class="step future" data-state="strut-slide-2" data-x="10103.466666666667" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-2" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 73px; left: 200px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font color="#920909">Me chamo Guilherme Costa Berghauser<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 176px; left: 303px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_arquivos/1XakuRy.jpg">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 645px; left: 355px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font color="#920909">Esse lindo ai sou eu ...<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(13926.4px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-4" class="step future" data-state="strut-slide-3" data-x="13926.4" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-3" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 140px; left: 203px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font color="#920909">Proponho uma nova experiência a vocês..<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 252px; left: 274px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_arquivos/uoIOieq.gif">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(17749.3px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-5" class="step future" data-state="strut-slide-4" data-x="17749.333333333332" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-4" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 48px; left: 239px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<div align="center"><font color="#920909">Mas caso você não queira<br>Pode ir direito ao que importa... :(<br></font></div>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 169px; left: 304px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font color="#920909">Caso aceite a novidade ...<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 683px; left: 259px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font color="#920909">Bem vindo ao um novo mundo!!!<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 256px; left: 216px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_arquivos/q46V03q.jpg">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(21572.3px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-6" class="step future" data-state="strut-slide-5" data-x="21572.266666666666" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-5" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 43px; left: 307px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<div align="center"><font color="#920909">Historia de hoje se chama:<br></font></div>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 145px; left: 289px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 64px;" class="antialias">
+<font color="#d52626">Torto em Floripa!</font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 292px; left: 282px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_arquivos/0lCK58u.jpg">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(25395.2px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-7" class="step future" data-state="strut-slide-6" data-x="25395.2" data-y="7065.6" data-scale="3">
+			<div class=" slideContainer strut-slide-6" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 50px; left: 159px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<font color="#920909">Era uma vez um guri, com o nome de Torto..<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 133px; left: 308px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_arquivos/gRnZB2Y.jpg">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 600px; left: 150px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+<div align="center"><font color="#920909">Essa pessoa linda resolve conhecer Floripa..<br>Mas ele não conhece nada e vai precisar de ajuda...</font></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(29218.1px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-8" class="step future" data-state="strut-slide-7" data-x="29218.133333333335" data-y="7065.6" data-scale="3">
+			<div class=" slideContainer strut-slide-7" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 300px; left: 144px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Ele é do interior e ao ver a praia ele fica <br></font><div align="center"><font color="#920909">EXTREMAMENTE FELIZ!<br></font></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(33041.1px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-9" class="step future" data-state="strut-slide-8" data-x="33041.066666666666" data-y="7065.6" data-scale="3">
+			<div class=" slideContainer strut-slide-8" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 330px; left: 73px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">O sonho dele sempre foi aprender a surfar..<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(36864px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-10" class="step future" data-state="strut-slide-9" data-x="36864" data-y="7065.6" data-scale="3">
+			<div class=" slideContainer strut-slide-9" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 312px; left: 44px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Ao visitar a empresa Taller que fica na cidade ..<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(40686.9px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-11" class="step future" data-state="strut-slide-10" data-x="40686.933333333334" data-y="7065.6" data-scale="3">
+			<div class=" slideContainer strut-slide-10" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 120px; left: 235px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Ele conhece o amigo ALDO ..<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 236px; left: 396px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 227px; height: 294.78px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.58, 1.58);
+-moz-transform: scale(1.58, 1.58);
+transform: scale(1.58, 1.58)">
+<img src="Deck%20Title_arquivos/ceZz7kM.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 586px; left: 156px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">A ele o Torto pediu ajuda para surfar..<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(44509.9px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-12" class="step future" data-state="strut-slide-11" data-x="44509.86666666667" data-y="7065.6" data-scale="3">
+			<div class=" slideContainer strut-slide-11" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 371px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Tubarão 2000<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 271px; left: 402px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<a href="surf.html" target="_blank"><img src="Deck%20Title_arquivos/9dLgEfO.png"></a>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(48332.8px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-13" class="step future" data-state="strut-slide-12" data-x="48332.8" data-y="11366.4" data-scale="3">
+			<div class=" slideContainer strut-slide-12" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 339px; left: 120px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Muito Bom, agora oTorto sabe surfar :D<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(52155.7px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-14" class="step future" data-state="strut-slide-13" data-x="52155.73333333333" data-y="11366.4" data-scale="3">
+			<div class=" slideContainer strut-slide-13" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 326px; left: 211px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<div align="center"><font color="#920909">Ao voltar a Taller..</font><br></div><div align="center"><font color="#920909">Algo de ruim esta acontecendo..</font><br></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(55978.7px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-15" class="step future" data-state="strut-slide-14" data-x="55978.666666666664" data-y="11366.4" data-scale="3">
+			<div class=" slideContainer strut-slide-14" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 338px; left: 327px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">O Drush FUGIU !!!<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 697px; left: 362px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 16px;" class="antialias">
+Cachorrinho mascote da empresa que é cego.<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(59801.6px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-16" class="step future" data-state="strut-slide-15" data-x="59801.6" data-y="11366.4" data-scale="3">
+			<div class=" slideContainer strut-slide-15" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 338px; left: 232px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Ajude o Rafa a encontrar ele..<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(63624.5px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-17" class="step future" data-state="strut-slide-16" data-x="63624.53333333333" data-y="11366.4" data-scale="3">
+			<div class=" slideContainer strut-slide-16" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 41px; left: 345px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Encontre o Drush<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 273px; left: 421px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<a href="canhao.html" target="_blank"><img src="Deck%20Title_arquivos/9dLgEfO.png"></a>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(67447.5px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-18" class="step future" data-state="strut-slide-17" data-x="67447.46666666666" data-y="11366.4" data-scale="3">
+			<div class=" slideContainer strut-slide-17" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 88px; left: 221px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">AEE, Drush seu sem vergonha..<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 605px; left: 384px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Não fuja mais!<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 272px; left: 421px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 193px; height: 207.53px;">
+<div class="transformContainer" style="-webkit-transform: scale(2.08, 2.08);
+-moz-transform: scale(2.08, 2.08);
+transform: scale(2.08, 2.08)">
+<img src="Deck%20Title_arquivos/4JupW0f.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(71270.4px, 15667.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-19" class="step future" data-state="strut-slide-18" data-x="71270.4" data-y="15667.2" data-scale="3">
+			<div class=" slideContainer strut-slide-18" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 290px; left: 121px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<div align="center"><font color="#920909">Depois dessa tensão..<br>Bora tomar uma bera e escutar um som!<br></font></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(75093.3px, 15667.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-20" class="step future" data-state="strut-slide-19" data-x="75093.33333333333" data-y="15667.2" data-scale="3">
+			<div class=" slideContainer strut-slide-19" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 299px; left: 224px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">O Torto sai com o amigo MAN<br></font><div align="center"><font color="#920909">Para um festa PUNK!<br></font></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(78916.3px, 15667.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-21" class="step future" data-state="strut-slide-20" data-x="78916.26666666666" data-y="15667.2" data-scale="3">
+			<div class=" slideContainer strut-slide-20" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 308px; left: 210px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<div align="center"><font color="#920909">Show de PUNK, não é nada sem..<br>RODA PUNK!!<br></font></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(82739.2px, 15667.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-22" class="step future" data-state="strut-slide-21" data-x="82739.2" data-y="15667.2" data-scale="3">
+			<div class=" slideContainer strut-slide-21" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 331px; left: 171px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Se divirta na roda PUNK com o MAN!<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(86562.1px, 15667.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-23" class="step active present" data-state="strut-slide-22" data-x="86562.13333333333" data-y="15667.2" data-scale="3">
+			<div class=" slideContainer strut-slide-22" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 67px; left: 413px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Roda Punk<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 315px; left: 413px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<a href="man.html" target="_blank"><img src="Deck%20Title_arquivos/9dLgEfO.png"></a>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(90385.1px, 15667.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-24" class="step future" data-state="strut-slide-23" data-x="90385.06666666667" data-y="15667.2" data-scale="3">
+			<div class=" slideContainer strut-slide-23" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 314px; left: 176px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Agora sim o Torto conheceu&nbsp; Floripa!<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(94208px, 19968px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-25" class="step future" data-state="strut-slide-24" data-x="94208" data-y="19968" data-scale="3">
+			<div class=" slideContainer strut-slide-24" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 326px; left: 486px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">FIM!<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(98030.9px, 19968px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-26" class="step future" data-state="strut-slide-25" data-x="98030.93333333333" data-y="19968" data-scale="3">
+			<div class=" slideContainer strut-slide-25" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 112px; left: 175px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#920909">Para acessar o portfólio completo<br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 345px; left: 387px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 48px;" class="antialias">
+<font color="#523232">Clique aqui!<br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+	<div style="position: absolute; transform: translate(-50%, -50%) translate3d(50244.3px, 11366.4px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(9); transform-style: preserve-3d;" id="overview" class="step future" data-state="strut-slide-overview" data-x="50244.26666666667" data-y="11366.4" data-scale="9"></div>
+	
+</div></div>
+<div class="hint">
+    <p>Use as setas ou a barra de espaço para navegar</p>
+</div>
+</div>
+</div></body></html>
